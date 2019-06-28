@@ -1,0 +1,302 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* entire settings */
+body {
+	/* emmet→fz or fz16 or fz1em */
+	scroll-behavior: smooth;
+	font-size: 14px;
+	line-height: 1.5;
+	animation: appear 1s ease;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0.1;
+	}
+	
+	100% {
+		opacity: 1.0;
+	}
+	
+}
+
+	/* 画像の隙間対策 */
+img{
+	/* vab */
+	vertical-align: bottom;
+	/* 親要素からはみ出さない */
+	max-width: 100%;
+}
+
+main,header {
+	padding: 0 15px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+/*link text settings*/
+a {
+	/* tdn */
+	text-decoration: none;
+}
+
+a:hover,
+.hdtop_sns img:hover {
+	color: #000;
+	transform: translate(0px,-2px);
+	text-shadow: 3px 3px 5px #ccc;
+	font-weight: bold;
+}
+
+
+/* top green belt */
+.hdtop {
+	/* bgc#22ac38 */
+	background-color: #22ac38;
+	/* p8-0 */
+	padding: 8px 0;
+}
+
+.hdtop_text,
+.hdtop_sns,
+.pc_nav,
+.contact {
+	display: none;
+}
+
+
+
+/* logo and mailbutton */
+h1 {
+	height: 66px;
+	margin: 18px 0;
+}
+
+.contact a {
+	display: inline-block;
+	padding: 15px;
+	color: #22ac38;
+	font-size: 1.125em;
+	font-family: 'Meiryo UI';
+	font-weight: bold;
+	border: 3px solid #22ac38;
+	border-radius: 12px;
+	text-decoration: none;
+	background-image: linear-gradient(#fff 35%, #ccc 100%);
+}
+
+
+/* mainvisual */
+/* .mv  {
+	background-image: repeating-linear-gradient(
+	-45deg, 
+	#fafafa, 
+	#fafafa 8px, 
+	#fff 0, 
+	#fff 12px);
+} */
+
+
+/* h2 settings */
+.concept h2 {
+	margin: 1.8em auto;
+	font-weight: bold;
+	font-size: 1.3em;
+	}
+
+.news h2, .items h2 {
+	border-left: 15px solid #22ac38;
+	padding: 8px 0 8px 18px;
+	margin:1.5em 0 1.5em;
+	font-size: 1.3em;
+}
+
+
+/* navigation */
+nav ul li a {
+	display: block;
+	border-right: 1px solid #fff;
+	background-color: #22ac38;
+	padding: 10px 0;
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Meiryo UI';
+}
+
+nav ul li {
+	width: 100%;
+	text-align: center;
+}
+
+nav ul li:last-child a {
+	border-right: none;
+}
+
+
+/* concept */
+.concept {
+	font-family: 'Noto Serif JP',sans-serif;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #22ac38;
+}
+
+
+
+/* news */
+.news {
+	border-bottom: 1px solid #22ac38;
+	padding-bottom: 30px;
+}
+
+.news figure {
+	display: none;
+	width: 30%;
+	margin-left: 15px;
+	text-align: center;
+	font-size: 0.75em;
+	padding-top: 0.2em;
+}
+
+.news ul li {
+	display: flex;
+	font-size: 0.9em;
+	margin-bottom: 5px;
+}
+
+.news li time {
+	width: 152px;
+}
+
+.news li a {
+	width: 65%;
+}
+
+.news div {
+	align-items: flex-start;
+}
+
+
+
+/* items */
+.cell {
+	max-width:470px;
+	margin: 30px auto;
+}
+
+.cell:last-child {
+	margin-bottom: 20px;
+}
+
+
+.items img {
+	border-radius: 300px;
+	margin-bottom: 10px;
+}
+
+.items p a {
+	margin-top: 10px;
+	text-align: center;
+	background-color: #22ac38;
+	color: #fff;
+	font-size: 1.2em;
+	display: inline-block;
+	padding: 10px 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+
+
+
+/* footer */
+footer p {
+	background-color: #22ac38;
+	padding: 10px 0;
+	font-size: 0.75em;
+	text-align: center;
+}
+
+
+
+
+/* PC-style breakpoint:500px */
+@media(min-width:640px) {
+	body {
+		font-size: 16px;
+	}
+
+	.hdtop_text,
+	.hdtop_sns,
+	.pc_nav,
+	.contact,
+	.news figure {
+		display: block;
+	}
+	
+	.mb_nav {
+		display: none;
+	}
+	
+	.wrap {
+		/* ブラウザの幅が960px以上→960固定
+		　　ブラウザの幅が960px以下→100%*/
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	.hdtop_text {
+		font-size: 13px;
+		color: #fff;
+	}
+
+	.hdtop_sns img {
+		width: 35px;
+		margin-left: 7px;
+	}
+
+	.items img {
+		border-radius: 15px;
+	}
+
+	.item-flex {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+
+	.cell {
+		max-width: 33.3%;
+		height: 100%;
+		margin: 0 5px;
+	}
+
+	.cell dd {
+		font-size: 0.8em;
+	}
+
+
+
+}/* @media */
+
+
+
+
+
+
+
+
+
+
+
+
+
